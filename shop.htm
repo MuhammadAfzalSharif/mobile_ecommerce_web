@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+        <!-- custom css  -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/shop.css">
+
+    <link rel="stylesheet" href="css/card.css">
+<!-- bootstrap  -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-tranparent  d-flex gap-5 nav-custom">
+        <div class="container-fluid p-2">
+          <a class="navbar-brand " style="padding:0 50px;" href="index.htm">Electro Mart</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex gap-5">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.htm">Home</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="shop.htm">Shop</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="cart.htm">Cart</a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="reviews.htm"
+                  >Reviews</a
+                >
+              </li>
+  
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Account
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item text-dark" href="login.htm">Login</a></li>
+                  <li><a class="dropdown-item text-dark" href="signup.htm">Sign Up</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <form class="d-flex">
+                <input
+                  class="form-control me-2 searchbox"
+                  type="text"
+                  placeholder="Search By Keyword"
+                  aria-label="Search"
+                />
+                <i class='bx bx-search-alt-2 search-btn'></i>
+              </form>
+            
+          </div>
+        </div>
+      </nav>
+
+    <!-- searching methods  -->
+    <div class="sorting">
+        <h6>Brand:<input class="brand-field" type="text" placeholder="Eg. samsung , infinix"><i class='bx bx-search-alt-2 brand'></i></h6>
+        <h6>Price:<input class="price-field" type="number" placeholder="Your Range"><i class='bx bx-search-alt-2 price'></i></h6>
+        <h6>Color:<input class="color-field" type="text" placeholder="Green"><i class='bx bx-search-alt-2 color'></i></h6>
+        <h6>Mobile:<input class="mobile-field" type="Text" placeholder="Google pixel 7"><i class='bx bx-search-alt-2 mobile'></i></h6>
+    </div>
+
+<!-- products  -->
+    <div class="featured-product ">
+
+        <div class="card-container">
+
+            <div class="card border-0 rounded-0 shadow" style="width: 18rem">
+                <img
+                  src="https://images.samsung.com/is/image/samsung/p6pim/pk/sm-a346elgepkd/gallery/pk-galaxy-a34-5g-sm-a346-sm-a346elgepkd-538124878?$ORIGIN_PNG$?$450_450_PNG$"
+                  class="card-img-top rounded-0"
+                  alt="..."
+                />
+               
+                <h4 class="product-name">Samsung Galaxy A23</h4>
+                <div class="stars">
+                  <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                  <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                  <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                  <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                  <i class='bx bx-star' style='color:#37FF8B;'  ></i>
+                </div>
+                
+                <div class="d-flex justify-content-evenly text-center align-item-center text-center ">
+                  
+                      <h4 class="">150$</h4>     
+                     
+                      <button  class="button add-to-cart " pName="Samsung Galaxy A23" pImg="https://images.samsung.com/is/image/samsung/p6pim/pk/sm-a346elgepkd/gallery/pk-galaxy-a34-5g-sm-a346-sm-a346elgepkd-538124878?$ORIGIN_PNG$?$450_450_PNG$"  pPrice="150" pCompany="samsung"  pColor="green" pKeyword=" green  3camera  samsung  galaxy 23  150" >
+                        Add To Cart
+                        <svg class="cartIcon" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+                       </button>
+                  
+                </div>
+              </div>
+  
+  
+              <div class="card border-0 rounded-0 shadow" style="width: 18rem">
+                  <img
+                    src="https://images.samsung.com/is/image/samsung/p6pim/pk/sm-a235flbkpkd/gallery/pk-galaxy-a23-sm-a235-sm-a235flbkpkd-532683705?$ORIGIN_PNG$?$450_450_PNG$"
+                    class="card-img-top rounded-0"
+                    alt="..."
+                  />
+                 
+                  <h4 class="product-name">Samsung Galaxy A25</h4>
+                  <div class="stars">
+                    <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                    <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                    <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                    <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                    <i class='bx bx-star' style='color:#37FF8B;'  ></i>
+                  </div>
+                  
+                  <div class="d-flex justify-content-evenly text-center align-item-center text-center ">
+                    
+                        <h4 class="">170$</h4>     
+                        <button  class="button add-to-cart "  pCompany="samsung"  pColor="blue" pKeyword="samsung galaxy blue 3camera 170 a25" pName="Samsung Galaxy A25" pImg="https://images.samsung.com/is/image/samsung/p6pim/pk/sm-a235flbkpkd/gallery/pk-galaxy-a23-sm-a235-sm-a235flbkpkd-532683705?$ORIGIN_PNG$?$450_450_PNG$"  pPrice="170">
+                          Add To Cart
+                          <svg class="cartIcon" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+                         </button>
+                    
+                  </div>
+                </div>
+  
+  
+  
+                <div class="card border-0 rounded-0 shadow" style="width: 18rem">
+                  <img
+                    src="https://images.samsung.com/is/image/samsung/p6pim/pk/sm-a736blghpkd/gallery/pk-galaxy-a73-5g-a736-sm-a736blghpkd-532683352?$ORIGIN_PNG$?$450_450_PNG$"
+                    class="card-img-top rounded-0"
+                    alt="..."
+                  />
+                 
+                  <h4 class="product-name">Samsung Galaxy A50</h4>
+                  <div class="stars">
+                    <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                    <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                    <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                    <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                    <i class='bx bx-star' style='color:#37FF8B;'  ></i>
+                  </div>
+                  
+                  <div class="d-flex justify-content-evenly text-center align-item-center text-center ">
+                    
+                        <h4 class="">180$</h4>     
+                        <button  class="button add-to-cart " pCompany="samsung"  pColor="green" pKeyword="samsung galaxy 3camera a50 mint green 180" pName="Samsung Galaxy A50" pImg="https://images.samsung.com/is/image/samsung/p6pim/pk/sm-a736blghpkd/gallery/pk-galaxy-a73-5g-a736-sm-a736blghpkd-532683352?$ORIGIN_PNG$?$450_450_PNG$"  pPrice="180" >
+                          Add To Cart
+                          <svg class="cartIcon" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+                         </button>
+                    
+                  </div>
+                </div>
+  
+                <div class="card border-0 rounded-0 shadow" style="width: 18rem">
+                  <img
+                    src="https://images.samsung.com/is/image/samsung/p6pim/pk/sm-a546ezkdpkd/gallery/pk-galaxy-a54-5g-sm-a546-sm-a546ezkdpkd-538125087?$ORIGIN_PNG$?$450_450_PNG$"
+                    class="card-img-top rounded-0"
+                    alt="..."
+                  />
+                 
+                  <h4 class="product-name">Samsung Galaxy A55</h4>
+                  <div class="stars">
+                    <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                    <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                    <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                    <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                    <i class='bx bx-star' style='color:#37FF8B;'  ></i>
+                  </div>
+                  
+                  <div class="d-flex justify-content-evenly text-center align-item-center text-center ">
+                    
+                        <h4 class="">200$</h4>     
+                       
+                        <button  class="button add-to-cart "  pCompany="samsung"  pColor="black" pKeyword="samsung galaxy 3camera a55 black 200" pName="Samsung Galaxy A55" pImg="https://images.samsung.com/is/image/samsung/p6pim/pk/sm-a546ezkdpkd/gallery/pk-galaxy-a54-5g-sm-a546-sm-a546ezkdpkd-538125087?$ORIGIN_PNG$?$450_450_PNG$"  pPrice="200">
+                          Add To Cart
+                          <svg class="cartIcon" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+                         </button>
+                    
+                  </div>
+                </div>
+
+
+
+
+                <div class="card border-0 rounded-0 shadow" style="width: 18rem">
+                    <img
+                      src="https://cdn.dxomark.com/wp-content/uploads/medias/post-160143/Google-Pixel-8-featured-image-packshot-review-Recovered-1024x691.jpg"
+                      class="card-img-top rounded-0"
+                      alt="..."
+                    />
+                   
+                    <h4 class="product-name">Google Pixel 6</h4>
+                    <div class="stars">
+                      <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                      <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                      <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                      <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                      <i class='bx bx-star' style='color:#37FF8B;'  ></i>
+                    </div>
+                    
+                    <div class="d-flex justify-content-evenly text-center align-item-center text-center ">
+                      
+                          <h4 class="">400$</h4>     
+                          
+                          <button  class="button add-to-cart " pCompany="google"  pColor="grey" pKeyword="google pixel6 grey 400" pName="Google Pixel 6" pImg="https://cdn.dxomark.com/wp-content/uploads/medias/post-160143/Google-Pixel-8-featured-image-packshot-review-Recovered-1024x691.jpg"  pPrice="400">
+                            Add To Cart
+                            <svg class="cartIcon" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+                           </button>
+                      
+                    </div>
+                  </div>
+      
+      
+                  <div class="card border-0 rounded-0 shadow" style="width: 18rem">
+                      <img
+                        src="https://lh3.googleusercontent.com/HLsFbmHFSkuUvd_WQ4YBKfVNkBiTpVZLNJ0FwrdtNNqe10pkXkLrC1PYDrRLPTBquEWdHfzZ8yXBn-U8Z1sc3DcNv_1jm5tsZGof"
+                        class="card-img-top rounded-0"
+                        alt="..."
+                      />
+                     
+                      <h4 class="product-name">Google Pixel 7</h4>
+                      <div class="stars">
+                        <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                        <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                        <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                        <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                        <i class='bx bx-star' style='color:#37FF8B;'  ></i>
+                      </div>
+                      
+                      <div class="d-flex justify-content-evenly text-center align-item-center text-center ">
+                        
+                            <h4 class="">650$</h4>     
+                            
+                            <button  class="button add-to-cart " pCompany="google"  pColor="blue" pKeyword="google pixel7 light blue 650 " pName="Google Pixel 7" pImg="https://lh3.googleusercontent.com/HLsFbmHFSkuUvd_WQ4YBKfVNkBiTpVZLNJ0FwrdtNNqe10pkXkLrC1PYDrRLPTBquEWdHfzZ8yXBn-U8Z1sc3DcNv_1jm5tsZGof"  pPrice="650" >
+                              Add To Cart
+                              <svg class="cartIcon" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+                             </button>
+                        
+                      </div>
+                    </div>
+      
+      
+      
+                    <div class="card border-0 rounded-0 shadow" style="width: 18rem">
+                      <img
+                        src="https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2023/10/Google-Pixel-8a-5K-renders-Smartprix-Exclusive-1-scaled.jpg?ssl=1"
+                        class="card-img-top rounded-0"
+                        alt="..."
+                      />
+                     
+                      <h4 class="product-name">Google Pixel 8</h4>
+                      <div class="stars">
+                        <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                        <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                        <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                        <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                        <i class='bx bx-star' style='color:#37FF8B;'  ></i>
+                      </div>
+                      
+                      <div class="d-flex justify-content-evenly text-center align-item-center text-center ">
+                        
+                            <h4 class="">700$</h4>     
+                            <button  class="button add-to-cart " pCompany="google"  pColor="orange" pKeyword="google pixel8 light orange 700" pName="Google Pixel 8" pImg="https://i0.wp.com/www.smartprix.com/bytes/wp-content/uploads/2023/10/Google-Pixel-8a-5K-renders-Smartprix-Exclusive-1-scaled.jpg?ssl=1"  pPrice="700"  >
+                              Add To Cart
+                              <svg class="cartIcon" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+                             </button>
+                        
+                      </div>
+                    </div>
+      
+                    <div class="card border-0 rounded-0 shadow" style="width: 18rem">
+                      <img
+                        src="https://lh3.googleusercontent.com/ZBUxb_18eOInSurx92b5bJCPAlc1W5d5fTEQvlyyIvhoqNjkX26-BuyKmoNdi9JYHFIzUXUwlf_j0kYtvZtuLN62G_pjdpVSQCo5"
+                        class="card-img-top rounded-0"
+                        alt="..."
+                      />
+                     
+                      <h4 class="product-name">Google Pixel 9</h4>
+                      <div class="stars">
+                        <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                        <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                        <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                        <i class='bx bxs-star' style='color:#37FF8B;'  ></i>
+                        <i class='bx bx-star' style='color:#37FF8B;'  ></i>
+                      </div>
+                      
+                      <div class="d-flex justify-content-evenly text-center align-item-center text-center ">
+                        
+                            <h4 class="">1000$</h4>     
+                            
+                            <button  class="button add-to-cart " pCompany="google"  pColor="green" pKeyword="google pixel9 light mint green 1000" pName="Google Pixel 9" pImg="https://lh3.googleusercontent.com/ZBUxb_18eOInSurx92b5bJCPAlc1W5d5fTEQvlyyIvhoqNjkX26-BuyKmoNdi9JYHFIzUXUwlf_j0kYtvZtuLN62G_pjdpVSQCo5"  pPrice="1000">
+                              Add To Cart
+                              <svg class="cartIcon" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path></svg>
+                             </button>
+                        
+                      </div>
+                    </div>
+
+        </div>
+    </div>
+
+
+
+<!-- bootstrap js  -->
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- cusotm js  -->
+    <script src="js/shop.js"></script>
+</body>
+
+</html>

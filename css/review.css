@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--text2);
+
+
+}
+
+.outer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+}
+
+.form-control input,
+.form-control textarea {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #0f0f0f;
+
+}
+
+
+.form-control textarea {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #fff solid;
+    display: block;
+    width: 100%;
+    padding: 40px 0;
+    font-size: 18px;
+    color: #0f0f0f;
+
+}
+
+.form-control input:focus,
+.form-control input:valid,
+.form-control textarea:focus {
+    outline: 0;
+    border-bottom-color: #37FF8B;
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #000000;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus+label span,
+.form-control input:valid+label span {
+    color: #37FF8B;
+    transform: translateY(-30px);
+}
+
+textarea:focus+label span {
+    color: #37FF8B;
+    transform: translateY(-30px);
+}
+
+
+
+/* button  */
+
+/* === removing default button style ===*/
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+/* button styling */
+.button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255, 255, 255, 0.6);
+    --animation-color: #37FF8B;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: black;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* this is the text, when you hover on button */
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+
+/* hover */
+.button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+
+.inner1 {
+    width:60vw;
+    border-radius: 37px;
+    border-radius: 37px;
+    background: #ffffff;
+    box-shadow: inset 16px -16px 36px #37FF8B,inset -16px 16px 36px #37FF8B;
+    height: 600px;
+    overflow-x:hidden ;
+}
+
+
+.review
+{
+    padding:40px 20px 20px 40px;
+
+    border-bottom: #000000;
+}
+
+.review p
+{
+    padding-left: 20px;
+}

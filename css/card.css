@@ -1,0 +1,94 @@
+
+:root
+{
+   --yellow:white;
+}
+
+
+.featured-product
+{
+   padding: 30px;
+}
+.featured-product h2
+{
+   margin-top: 120px;
+   color: black ;
+   padding-left: 30px;
+   
+}
+
+.featured-product .product-name
+{
+  
+   color: black ;
+   padding-left: 30px;
+   cursor: default;
+   
+}
+
+
+
+.featured-product h4
+{
+   color: black;
+   margin-top: 0px;
+   padding: 10px;
+   border-radius: 10px;
+   font-size: 20px;
+   
+}
+
+
+.add-to-cart
+{
+   cursor: pointer;
+   color: var(--yellow) !important;
+}
+
+
+
+
+.card-container
+{
+   padding: 40px 80px;
+   z-index: 100;
+   position: relative;
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+   gap: 20px;
+  
+
+}
+
+
+.stars
+{
+   padding:10px 0;
+   padding-left: 30px;
+   font-size: 20px;
+
+}
+
+
+
+
+.new-product
+{
+   margin-top: -60px;
+   
+
+}
+
+
+.featured-product img
+{
+   width: 288px;
+   height: 200px;
+   object-fit: cover;
+   object-position: center;
+}
+
+.card
+{
+   padding: 20px;
+}
